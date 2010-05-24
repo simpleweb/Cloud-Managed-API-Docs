@@ -1,0 +1,3 @@
+[submodule "LucidGecko"]
+	path = LucidGecko
+	url = git://github.com/simpleweb/LucidGeckoPHP.git
