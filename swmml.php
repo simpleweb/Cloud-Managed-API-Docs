@@ -73,7 +73,7 @@ back to legacy SWM CSS which will eventually be deprecated.</p>
 has not been heavily tested and for now it is recommended to put in an absolute path
 (including server) to your CSS.</p>
 
-<h4 class="fancy"5>Example</h4>
+<h4 class="fancy">Example</h4>
 
 <swm:css href="//css/demo.css" />
 

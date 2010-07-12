@@ -8,8 +8,8 @@ require_once('config.php');
 //Create an instance of the API Lib. This is like this with getInstance because the class is implemented as a singleton.
 $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 
-$lucidGecko->outputCalls = true;
-$lucidGecko->friendlyErrors = true;
+//$lucidGecko->outputCalls = true;
+//$lucidGecko->friendlyErrors = true;
 
 if(isset($_POST['name'])) {
 	
@@ -33,9 +33,10 @@ if(isset($_POST['name'])) {
 	}
 }
 ?>
+<swm:page title="Post To Activity Feed" />
 
 <div id="doc3" class="yui-t7">
-   <div id="hd" role="banner"><h3>Post To Activity Feed</h3></div>
+   <div id="hd" role="banner"><h3>How to post a message to the activity feed.</h3></div>
    <div id="bd" role="main">
 	<div class="yui-g">
 

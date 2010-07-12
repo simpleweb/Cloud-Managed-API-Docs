@@ -10,9 +10,10 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 
 //Information for the logged in user.
 ?>
+<swm:page title="Context Information" />
 
 <div id="doc3" class="yui-t7">
-   <div id="hd" role="banner"><h3>Context Information</h3></div>
+   <div id="hd" role="banner"><h3>What information does SWM pass your app?</h3></div>
    <div id="bd" role="main">
 	<div class="yui-g">
     <div class="yui-u first">
@@ -198,20 +199,6 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				</td>
 			</tr>
 		</table>
-		
-		<h5>Website Context</h5>
-		
-		<p>For a plugin installed at a website level, the following website details are also available.
-		The website key is unique for each website and is therefore suitable for storing data.</p>
-		
-		<p class="highlight">Website level installations will most likely be deprecated in the near future.</p>
-		
-		<ul>
-		<?php
-		echo '<li><strong>Website Key:</strong> ' . $lucidGecko->website['Key'] . ' <code>$lucidGecko->website[\'Key\']</code></li>';
-		echo '<li><strong>Domain (this is the primary domain):</strong> ' . $lucidGecko->website['Domain'] . '</li></p>';
-		?>
-		</ul>
 		
 	</div>
 
