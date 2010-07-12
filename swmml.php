@@ -1,18 +1,15 @@
 <?php
 //Let's get cracking. Include the Swim API lib. This is known as LucidGecko.
-require_once('LucidGecko3/LucidGecko3.php');
+require_once('LucidGecko/LucidGecko.php');
 
 //Include a config file with our api details.
 require_once('config.php');
 
 //Create an instance of the API Lib. This is like this with getInstance because the class is implemented as a singleton.
-$lucidGecko = LucidGecko2::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
+$lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 
-//Information for the logged in user.
 ?>
-<!--YUI is used for layout if you load the yuitrip framework.-->
-<swm:css framework="yuitrip" />
-
+<swm:page title="SWMML - Adding Extended Functionality To Your Applications" />
 <div id="doc3" class="yui-t7">
    <div id="hd"><h3>SWMML</h3></div>
    <div id="bd">
@@ -35,6 +32,7 @@ attributes are shown in square brackets.</p>
 	<li><a href="#swm:nav">swm:Nav</a></li>
 	<li><a href="#swm:css">swm:CSS</a></li>
 	<li><a href="#swm:companyautocomplete">swm:CompanyAutoComplete</a></li>
+	<li><a href="#swm:userautocomplete">swm:UserAutoComplete</a></li>
 	<li><a href="#swm:flash">swm:Flash</a></li>
 	<li><a href="#swm:imagepicker">swm:ImagePicker</a></li>
 	<li><a href="#swm:filepicker">swm:FilePicker</a></li>
@@ -77,15 +75,16 @@ has not been heavily tested and for now it is recommended to put in an absolute 
 
 <h4 class="fancy"5>Example</h4>
 
-<code>&lt;swm:css framework=&quot;yuitrip&quot; href=&quot;http://yourserver.com/screen.css&quot; /&gt;</code>
+<swm:css href="//css/demo.css" />
+
+<p class="modifiedByCss">This paragraph style has been modified by the app's CSS!</p>
+
+<code>&lt;swm:css href=&quot;http://yourserver.com/screen.css&quot; /&gt;</code>
 
 <h4 class="fancy">Parameters</h4>
 
 <dl>
-	<dt>[framework]</dt>
-	<dd>The framework to load. Currently only yuitrip is supported.</dd>
-	
-	<dt>[href]</dt>
+	<dt>href</dt>
 	<dd>Absolute URL to your own CSS file to further enhanced styles.</dd>	
 </dl>
 
@@ -100,7 +99,7 @@ of this can be seen below:</p>
 
 <h4 class="fancy">Demo</h4>
 
-<p>Type in the box to find a company (you'll need to make sure you've added a company to your account first): <swm:companyautocomplete id="myid" /></p>
+<p>Type in the box to find a company (you'll need to make sure you've added a company to your account first): <swm:companyautocomplete id="myid" value="8db3b67c-8c23-11df-a445-0014221b3344" /></p>
 
 <h4 class="fancy">Example</h4>
 
@@ -133,6 +132,48 @@ need to allow for these fields possibly being blank due to no selection being ma
 	<dd>The unique company key value of the selection. This value can be used by your application for storing company specific data.</dd>		
 </dl>
 
+
+<h4 id="swm:userautocomplete">swm:UserAutoComplete</h4>
+
+<p>Outputs a user lookup auto complete box.</p>
+
+<p>Provides an easy way for someone to lookup a user within a company. An example
+of this can be seen below:</p>
+
+<h4 class="fancy">Demo</h4>
+
+<p>Type in the box to find a company (you'll need to make sure you've added a company to your account first): <swm:userautocomplete id="myuserpicker" /></p>
+
+<h4 class="fancy">Example</h4>
+
+<code>&lt;swm:companyautocomplete id=&quot;id_for_postback&quot; value=&quot;&quot; /&gt;</code>
+
+<h4 class="fancy">Parameters</h4>
+
+<dl>
+	<dt>id</dt>
+	<dd>This is required and used as the prefix for the posted back form items.</dd>
+	
+	<dt>[value]</dt>
+	<dd>This is for reloading a previously selected value back in to the selection box. It should
+be populated with the CompanyKey of the previously selected user. The value obtained
+from the postback item ValueOf_&lt;ID&gt; (see postback values).</dd>
+</dl>
+
+<h4 class="fancy">Postback Values</h4>
+
+<p>These items are sent to your application as POST items when a form containing this tag is submitted. <strong>You
+need to allow for these fields possibly being blank due to no selection being made.</strong></p>
+
+<p>&lt;ID&gt; needs to be replaced with the value you choose for the id parameter.</p>
+
+<dl>
+	<dt>LabelFor_&lt;ID&gt;</dt>
+	<dd>The name of the company selected by the user. This is the value the person sees.</dd>
+
+	<dt>ValueOf_&lt;ID&gt;</dt>
+	<dd>The unique company key value of the selection. This value can be used by your application for storing company specific data.</dd>		
+</dl>
 
 
 <h4 id="swm:flash">swm:Flash</h4>

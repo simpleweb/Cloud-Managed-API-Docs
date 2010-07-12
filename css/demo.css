@@ -1,0 +1,8 @@
+p.modifiedByCss {
+	font-weight: bold;
+	font-size: 18px;
+	display: block;
+	background-color: #ccc;
+	padding: 10px;
+	margin: 10px;
+}
