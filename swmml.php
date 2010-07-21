@@ -29,6 +29,8 @@ attributes SWM will throw an exception. For the purpose of this document, option
 attributes are shown in square brackets.</p>
 <p>An explanation and examples of each tag follows below:</p>
 <ul>
+	<li><a href="#swm:page">swm:Page</a></li>
+	<li><a href="#swm:crumb">swm:Crumb</a></li>
 	<li><a href="#swm:nav">swm:Nav</a></li>
 	<li><a href="#swm:css">swm:CSS</a></li>
 	<li><a href="#swm:companyautocomplete">swm:CompanyAutoComplete</a></li>
@@ -40,6 +42,43 @@ attributes are shown in square brackets.</p>
 	<li><a href="#swm:company">swm:Company</a></li>
 	<li><a href="#mceeditor">WYSIWYG Editor</a></li>
 </ul>
+
+<h4 id="swm:page">swm:Page</h4>
+
+<p>Sets page title for your app. This will also be used by default as the crumb title.</p>
+
+<h4 class="fancy">Example</h4>
+
+<code><pre>
+&lt;swm:page title=&quot;My Page Title&quot; /&gt;
+</pre></code>
+
+<h4 class="fancy">Parameters</h4>
+
+<dl>
+	<dt>title</dt>
+	<dd>The title of the page. Will set both heading title and browser title.</dd>	
+</dl>
+
+<h4 id="swm:crumb">swm:Crumb</h4>
+
+<p>Only really required if you want to override the crumb set by swm:page or add additional crumbs. Add one tag per crumb.</p>
+
+<h4 class="fancy">Example</h4>
+
+<code><pre>
+&lt;swm:crumb label=&quot;Crumb Label&quot; href=&quot;//page.php&quot; /&gt;
+</pre></code>
+
+<h4 class="fancy">Parameters</h4>
+
+<dl>
+	<dt>label</dt>
+	<dd>The visible label of the crumb</dd>	
+	<dt>[href]</dt>
+	<dd>An optional page to link to. Without this, the crumb will not be linked.</dd>	
+</dl>
+
 
 <h4 id="swm:nav">swm:Nav</h4>
 
@@ -58,8 +97,6 @@ attributes are shown in square brackets.</p>
 	&lt;/div&gt;
 &lt;/swm:nav&gt;
 </pre></code>
-
-	</div>
 
 
 <h4 id="swm:css">swm:CSS</h4>
