@@ -332,7 +332,7 @@ Forename: <strong><swm:user id="161" detail="forename" /></strong><br />
 Surname: <strong><swm:user id="161" detail="surname" /></strong><br />
 Full name: <strong><swm:user id="161" detail="name" /></strong><br />
 Profile picture:<br /><swm:user id="161" detail="profilepic" />
-Profile picture:<br /><swm:user id="161" detail="link" action="about">Link To About Page</swm:user>
+Profile link:<br /><swm:user id="161" detail="link" action="about">Link To User About Page</swm:user>
 </p>
 
 <h4 class="fancy">Example</h4>
@@ -365,6 +365,7 @@ Profile picture:<br /><swm:user id="161" detail="link" action="about">Link To Ab
 <p>
 CompanyName: <strong><swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="name" /></strong><br />
 Logo:<br /><swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="logo" />
+Profile link<br/><swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="link" action="about">Link To Company About Page</swm:company>
 </p>
 
 <h4 class="fancy">Example</h4>
@@ -378,8 +379,11 @@ Logo:<br /><swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" d
 	<dd>The CompanyKey of the company you want to output details for.</dd>
 
 	<dt>detail</dt>
-	<dd>What you want to output. Current values are 'name', 'logo'.</dd>
+	<dd>What you want to output. Current values are 'name', 'logo', 'homepage', 'link'.</dd>
 	
+	<dt>[action]</dt>
+	<dd>if detail is set to 'link' it will return a link to this action. When using link and action, the swmml tag should surround the content you want to link.</dd>
+		
 </dl>
 
 <h4 id="mceeditor">WYSIWYG Editor</h4>
