@@ -12,5 +12,5 @@ $lucidGecko->friendlyErrors = true;
 $lucidGecko->outputCalls = true;
 
 //Information for the logged in user.
-$lucidGecko->getProfileData($lucidGecko->locationCompany['GUID'], 'Twitter');
+$lucidGecko->getProfileDataOfCompanyPeople($lucidGecko->locationCompany['GUID'], 'Twitter');
 ?>

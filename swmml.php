@@ -327,10 +327,12 @@ page. There will be a form item posted back to your page with this id.</dd>
 <h4 class="fancy">Demo</h4>
 
 <p>
+
 Forename: <strong><swm:user id="161" detail="forename" /></strong><br />
 Surname: <strong><swm:user id="161" detail="surname" /></strong><br />
 Full name: <strong><swm:user id="161" detail="name" /></strong><br />
 Profile picture:<br /><swm:user id="161" detail="profilepic" />
+Profile picture:<br /><swm:user id="161" detail="link" action="about">Link To About Page</swm:user>
 </p>
 
 <h4 class="fancy">Example</h4>
@@ -342,10 +344,14 @@ Profile picture:<br /><swm:user id="161" detail="profilepic" />
 
 <dl>
 	<dt>id</dt>
-	<dd>The UserID of the user you want to output details for.</dd>
+	<dd>The UserID of the user you want to output details for. Can also be a GuRowID.</dd>
 
 	<dt>detail</dt>
-	<dd>What you want to output. Current values are 'forename', 'surname', 'name', 'profilepic'.</dd>
+	<dd>What you want to output. Current values are 'forename', 'surname', 'name', 'profilepic', 'homepage', 'link', 'action'.</dd>
+	
+	<dt>[action]</dt>
+	<dd>if detail is set to 'link' it will return a link to this action. When using link and action, the swmml tag should surround the content you want to link.</dd>
+	
 	
 </dl>
 
@@ -357,8 +363,8 @@ Profile picture:<br /><swm:user id="161" detail="profilepic" />
 <h4 class="fancy">Demo</h4>
 
 <p>
-CompanyName: <strong><swm:company companykey="simpleweb" detail="name" /></strong><br />
-Logo:<br /><swm:company companykey="simpleweb" detail="logo" />
+CompanyName: <strong><swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="name" /></strong><br />
+Logo:<br /><swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="logo" />
 </p>
 
 <h4 class="fancy">Example</h4>

@@ -11,15 +11,15 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 //Information for the logged in user.
 ?>
 
-<!--YUI is used for layout if you load the yuitrip framework.-->
 
+<!--YUI is used for layout if you load the yuitrip framework.-->
+<swm:page title="Welcome to ContactZilla App Development" />
 
 <div id="doc3" class="yui-t7">
-   <div id="hd" role="banner"><h3>Welcome to SWM App Development</h3></div>
    <div id="bd" role="main">
 		<div class="yui-g">
 		
-			<p>This SWM App serves to get you up to speed with developing applications to work within SWM.</p>	
+			<p>This ContactZilla App serves to get you up to speed with developing applications to work within ContactZilla.</p>	
 		
 			<p>We hope SWM will make it easy to quickly deliver applications to your customers and a potential wider audience.</p>
 			
