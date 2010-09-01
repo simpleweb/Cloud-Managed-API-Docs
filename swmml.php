@@ -31,7 +31,8 @@ attributes are shown in square brackets.</p>
 <ul>
 	<li><a href="#swm:page">swm:Page</a></li>
 	<li><a href="#swm:crumb">swm:Crumb</a></li>
-	<li><a href="#swm:nav">swm:Nav</a></li>
+	<li><a href="#swm:sidebar">swm:Sidebar</a></li>
+	<li><a href="#swm:titlenav">swm:Titlenav</a></li>
 	<li><a href="#swm:css">swm:CSS</a></li>
 	<li><a href="#swm:companyautocomplete">swm:CompanyAutoComplete</a></li>
 	<li><a href="#swm:userautocomplete">swm:UserAutoComplete</a></li>
@@ -80,22 +81,39 @@ attributes are shown in square brackets.</p>
 </dl>
 
 
-<h4 id="swm:nav">swm:Nav</h4>
+<h4 id="swm:sidebar">swm:Sidebar</h4>
 
-<p>Outputs main application navigation. Currently, this tag just surrounds a div with an id of appNav that contains a UL list. In the future this will change to make it easier to add navigation.</p>
+<p>Outputs the sidebar for an application. Can appear anywhere in your code.</p>
 
 <h4 class="fancy">Example</h4>
 
 <code><pre>
-&lt;swm:nav&gt;
-	&lt;div id=&quot;appNav&quot;&gt;
-		&lt;ul&gt;
-			&lt;li&gt;&lt;a href=&quot;//activity/&quot;&gt;Activity&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;//&quot;&gt;List People&lt;/a&gt;&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;//add-user/&quot;&gt;Add Person&lt;/a&gt;&lt;/li&gt;
+&lt;swm:sidebar&gt;
+	&lt;div class=&quot;pane&quot;&gt;
+		&lt;h3 class=&quot;title&quot;&gt;Contents&lt;/h3&gt;
+	
+		&lt;ul class=&quot;linkList&quot;&gt;
+			&lt;li class=&quot;on&quot;&gt;&lt;a href=&quot;//index.php&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;//context.php&quot;&gt;Context Information&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;//postactivity.php&quot;&gt;Posting To Activity Feed&lt;/a&gt;&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
-&lt;/swm:nav&gt;
+&lt;/swm:sidebar&gt;
+</pre></code>
+
+<h4 id="swm:titlenav">swm:Titlenav</h4>
+
+<p>Outputs the navigation that appears below the title for an application. Can appear anywhere in your code.</p>
+
+<h4 class="fancy">Example</h4>
+
+<code><pre>
+&lt;swm:titlenav&gt;
+	&lt;ul id=&quot;appPageNav&quot;&gt;
+		&lt;li class=&quot;first&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;on&quot;&gt;&lt;a href=&quot;#&quot;&gt;Nav item 2 on&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/swm:titlenav&gt;
 </pre></code>
 
 
