@@ -112,10 +112,10 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 					Parent Company Key
 				</td>
 				<td>
-					<?=$lucidGecko->parentCompany['Key']?>
+					<?=$lucidGecko->parentCompany['GUID']?>
 				</td>
 				<td>
-					<code>$lucidGecko->parentCompany['Key']</code>
+					<code>$lucidGecko->parentCompany['GUID']</code>
 				</td>
 			</tr>
 			<tr>
@@ -147,10 +147,10 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 					Company Key
 				</td>
 				<td>
-					<?=$lucidGecko->company['Key']?>
+					<?=$lucidGecko->company['GUID']?>
 				</td>
 				<td>
-					<code>$lucidGecko->company['Key']</code>
+					<code>$lucidGecko->company['GUID']</code>
 				</td>
 			</tr>
 			<tr>
@@ -181,10 +181,10 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 					Location Company Key
 				</td>
 				<td>
-					<?=$lucidGecko->locationCompany['Key']?>
+					<?=$lucidGecko->locationCompany['GUID']?>
 				</td>
 				<td>
-					<code>$lucidGecko->locationCompany['Key']</code>
+					<code>$lucidGecko->locationCompany['GUID']</code>
 				</td>
 			</tr>
 			<tr>
