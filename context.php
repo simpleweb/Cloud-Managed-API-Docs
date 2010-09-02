@@ -10,7 +10,7 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 
 //Information for the logged in user.
 ?>
-<swm:page title="Context Information" />
+<swm:page>Context Information</swm:page>
 
 <div id="doc3" class="yui-t7">
    <div id="hd" role="banner"><h3>What information does SWM pass your app?</h3></div>

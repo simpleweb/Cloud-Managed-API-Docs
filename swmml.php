@@ -259,6 +259,9 @@ be &quot;success&quot; (will output message in green), &quot;info&quot; (will ou
 	<dd>If specified SWM will redirect to the specified page before output the message. It is
 only necessary to provide a page name, you do not need to include the full absolute
 address.</dd>
+
+	<dt>[target]</dt>
+	<dd>If redirect is specified, you can also specify target of top or self. If top is specified, any lightbox will be closed with JS. Default is top.</dd>
 	
 </dl>
 
