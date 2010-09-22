@@ -12,7 +12,7 @@ $lucidGecko->friendlyErrors = true;
 $lucidGecko->outputCalls = true;
 
 //Information for the logged in user.
-$lucidGecko->requestWebhook(3016, 'IToDo', array('CompanyKey' => '8db3b67c-8c23-11df-a445-0014221b3344'));
+$lucidGecko->requestWebhook(3032, 'IToDo', array('CompanyKey' => '0c69eeb6-ada1-f154-659b-88da526fe3e2', 'AssignedTo' => '1402', 'Type' => 'text', 'Text' => 'hello', 'Link' => 'http://google.com/'));
 ?>
 <swm:hasinterface interface="IToDo">
 	<swm:interfaceapps interface="IToDo" type="radio" /> 

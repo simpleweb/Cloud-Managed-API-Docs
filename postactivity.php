@@ -8,8 +8,8 @@ require_once('config.php');
 //Create an instance of the API Lib. This is like this with getInstance because the class is implemented as a singleton.
 $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 
-//$lucidGecko->outputCalls = true;
-//$lucidGecko->friendlyErrors = true;
+$lucidGecko->outputCalls = true;
+$lucidGecko->friendlyErrors = true;
 
 if(isset($_POST['name'])) {
 	

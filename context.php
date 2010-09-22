@@ -12,11 +12,9 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 ?>
 <swm:page>Context Information</swm:page>
 
-<div id="doc3" class="yui-t7">
-   <div id="hd" role="banner"><h3>What information does SWM pass your app?</h3></div>
-   <div id="bd" role="main">
-	<div class="yui-g">
-    <div class="yui-u first">
+
+<h3>What information does SWM pass your app?</h3>
+
 	
 		<h4>User Details</h4>
 		
@@ -26,7 +24,6 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 			<tr>
 				<th>Property</th>
 				<th>Current Value</th>
-				<th>Code</th>
 			</tr>			
 			<tr>
 				<td>
@@ -35,30 +32,22 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				<td>
 					<?=$lucidGecko->user['ID']?>
 				</td>
-				<td>
-					<code>$lucidGecko->user['ID']</code>
-				</td>
 			</tr>
 			<tr>
 				<td>
 					Forename
 				</td>
 				<td>
-					<?=$lucidGecko->user['Forename']?>
+					<swm:user id="<?=$lucidGecko->user['ID']?>" detail="forename" />
 				</td>
-				<td>
-					<code>$lucidGecko->user['Forename']</code>
-				</td>
+				
 			</tr>		
 			<tr>
 				<td>
 					Surname
 				</td>
 				<td>
-					<?=$lucidGecko->user['Surname']?>
-				</td>
-				<td>
-					<code>$lucidGecko->user['Surname']</code>
+					<swm:user id="<?=$lucidGecko->user['ID']?>" detail="surname" />
 				</td>
 			</tr>
 			<tr>
@@ -66,10 +55,7 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 					Full Name
 				</td>
 				<td>
-					<?=$lucidGecko->user['Name']?>
-				</td>
-				<td>
-					<code>$lucidGecko->user['Name']</code>
+					<swm:user id="<?=$lucidGecko->user['ID']?>" detail="name" />
 				</td>
 			</tr>			
 				
@@ -82,14 +68,13 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 		
 		
 		if( $lucidGecko->user['IsReseller']) {
-			echo $lucidGecko->user['Name']. ' <strong>is a reseller.</strong>';	
+			echo '<swm:user id="'. $lucidGecko->user['GUID']. '" detail="name" /> <strong>is a reseller.</strong>';	
 		} else {
 			echo $lucidGecko->user['Name'] . ' is NOT reseller.';
 		}
 		?>
 	
-	</div>
-    <div class="yui-u">
+
 	
 		<h4>Call Location Details</h4>
 		
@@ -105,7 +90,7 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 			<tr>
 				<th>Property</th>
 				<th>Current Value</th>
-				<th>Code</th>
+				
 			</tr>			
 			<tr>
 				<td>
@@ -114,20 +99,16 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				<td>
 					<?=$lucidGecko->parentCompany['GUID']?>
 				</td>
-				<td>
-					<code>$lucidGecko->parentCompany['GUID']</code>
-				</td>
+				
 			</tr>
 			<tr>
 				<td>
 					Parent Company Name
 				</td>
 				<td>
-					<?=$lucidGecko->parentCompany['Name']?>
+					<swm:company companykey="<?=$lucidGecko->parentCompany['GUID']?>" detail="name" />
 				</td>
-				<td>
-					<code>$lucidGecko->parentCompany['Name']</code>
-				</td>
+				
 			</tr>
 		</table>		
 
@@ -140,7 +121,7 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 			<tr>
 				<th>Property</th>
 				<th>Current Value</th>
-				<th>Code</th>
+				
 			</tr>			
 			<tr>
 				<td>
@@ -149,20 +130,16 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				<td>
 					<?=$lucidGecko->company['GUID']?>
 				</td>
-				<td>
-					<code>$lucidGecko->company['GUID']</code>
-				</td>
+				
 			</tr>
 			<tr>
 				<td>
 					Company Name
 				</td>
 				<td>
-					<?=$lucidGecko->company['Name']?>
+					<swm:company companykey="<?=$lucidGecko->company['GUID']?>" detail="name" />
 				</td>
-				<td>
-					<code>$lucidGecko->company['Name']</code>
-				</td>
+				
 			</tr>
 		</table>
 		
@@ -174,7 +151,7 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 			<tr>
 				<th>Property</th>
 				<th>Current Value</th>
-				<th>Code</th>
+				
 			</tr>			
 			<tr>
 				<td>
@@ -183,28 +160,21 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				<td>
 					<?=$lucidGecko->locationCompany['GUID']?>
 				</td>
-				<td>
-					<code>$lucidGecko->locationCompany['GUID']</code>
-				</td>
+				
 			</tr>
 			<tr>
 				<td>
 					Location Company Name
 				</td>
 				<td>
-					<?=$lucidGecko->locationCompany['Name']?>
+					<swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="name" />
 				</td>
-				<td>
-					<code>$lucidGecko->locationCompany['Name']</code>
-				</td>
+				
 			</tr>
 		</table>
 		
-	</div>
 
-</div>
-	<div class="yui-g">
-	    <div class="yui-u first">
+
 	
 			<h3>General</h3>		
 
@@ -222,24 +192,14 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 			echo '<p><strong>Postback URL:</strong> ' .$lucidGecko->postbackUrl . '<br /></p>';
 			?>
 
-	    </div>
-	    <div class="yui-u">
+	
 
 		
 			<h3>Notes:</h3>
-			<p>
 				<ul>
 					<li>At the moment, you can only place app files in the root of your application.</li>
 					<li>The PHP LucidGecko lib uses CURL for communicating with the server so this will need to be enabled.</li>
-				</ul>
-			</p>
-		
-		</div>
-	</div>
-
-	</div>
-   <div id="ft" role="contentinfo"><p></p></div>
-</div>
+				</ul>	
 
 
 <!--You can put the main app nav anywhere in your output and it will be stripped out and moved, just make sure it's in a div ID'd as appNav -->
