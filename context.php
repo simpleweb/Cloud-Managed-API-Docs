@@ -110,6 +110,15 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				</td>
 				
 			</tr>
+			<tr>
+				<td>
+					Parent Company Url Key
+				</td>
+				<td>
+					<?=$lucidGecko->parentCompany['UrlKey']?>
+				</td>
+				
+			</tr>
 		</table>		
 
 		
@@ -141,6 +150,15 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				</td>
 				
 			</tr>
+			<tr>
+				<td>
+					Company Url Key
+				</td>
+				<td>
+					<?=$lucidGecko->company['UrlKey']?>
+				</td>
+				
+			</tr>
 		</table>
 		
 		<h5>Location Company Context</h5>
@@ -168,6 +186,15 @@ $lucidGecko = LucidGecko::getInstance(PLUGIN_KEY, PLUGIN_SECRET);
 				</td>
 				<td>
 					<swm:company companykey="<?=$lucidGecko->locationCompany['GUID']?>" detail="name" />
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					Location Company Url Key
+				</td>
+				<td>
+					<?=$lucidGecko->locationCompany['UrlKey']?>
 				</td>
 				
 			</tr>
