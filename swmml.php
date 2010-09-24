@@ -41,6 +41,7 @@ attributes are shown in square brackets.</p>
 	<li><a href="#swm:filepicker">swm:FilePicker</a></li>
 	<li><a href="#swm:user">swm:User</a></li>
 	<li><a href="#swm:company">swm:Company</a></li>
+	<li><a href="#swm:tweettext">swm:TweetText</a></li>
 	<li><a href="#mceeditor">WYSIWYG Editor</a></li>
 </ul>
 
@@ -406,6 +407,28 @@ Profile link<br/><swm:company companykey="<?=$lucidGecko->locationCompany['GUID'
 	<dd>if detail is set to 'link' it will return a link to this action. When using link and action, the swmml tag should surround the content you want to link.</dd>
 		
 </dl>
+
+
+<h4 id="swm:tweettext">swm:TweetText</h4>
+
+<p>Really handy little tag just to output the content as it contains linked for twitter.</p>
+
+<h4 class="fancy">Demo</h4>
+
+<p>Converts: Hey @redeye checkout out #contactzilla http://contactzilla.com/</p>
+
+<p>
+<swm:tweettext>Hey @redeye checkout out #contactzilla at http://contactzilla.com/</swm:tweettext>
+</p>
+
+<h4 class="fancy">Example</h4>
+
+<code>&lt;swm:tweettext&gt;Hey @redeye checkout out #contactzilla http://contactzilla.com/&lt;/swm:tweettext&gt;</code>
+
+<h4 class="fancy">Parameters</h4>
+
+<p>This tag does not take any parameters.</p>
+
 
 <h4 id="mceeditor">WYSIWYG Editor</h4>
 
